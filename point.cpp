@@ -1,7 +1,7 @@
 #include <cmath>
 #include <iostream>
 #include <cassert>
-//#include <string>
+
 class Point
 {
     private:
@@ -51,17 +51,17 @@ int main()
     Point b(3,2);
     
     double c = b - a;
-    std::cout << "c:  " << c << std::endl;
+    std::cout << "Distance:  " << c << std::endl;
     
     Point d = b / a;
-    std::cout << "d:  ";
+    std::cout << "Midpoint:  ";
     d.pretty_print();
     
     bool e = a == b;
-    std::cout << "a == b:  " << e << std::endl;
+    std::cout << "Point a == Point b:  " << e << std::endl;
     
     bool f = a != b;
-    std::cout << "a != b:  " << f << std::endl;
+    std::cout << "Point a != Point b:  " << f << std::endl;
     assert(fabs(c - 1.41421) < 1e-5);
     assert(d == Point(2.5,2.5));
     assert(e == 0);
